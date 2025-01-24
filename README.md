@@ -1,21 +1,21 @@
-# Scanner seci L2
+# ARP Scanner
 
-Skrypt ARP Scanner służy do skanowania sieci i wyświetlania adresów IP oraz odpowiadających im adresów MAC urządzeń w sieci lokalnej. Wykorzystuje bibliotekę `scapy` do tworzenia zapytań ARP i analizowania odpowiedzi.
+The ARP Scanner script is used to scan the network and display the IP addresses and corresponding MAC addresses of devices on the local network. It uses the `scapy` library to craft ARP requests and analyze the responses.
 
-## Funkcje
+## Features
 
 1. **`get_args()`**:  
-   Funkcja umożliwia przekazywanie argumentów do skryptu z wiersza poleceń. Oczekuje, że użytkownik poda adres IP (lub zakres adresów), który ma zostać przeskanowany.
+   This function allows passing arguments to the script via the command line. It expects the user to provide an IP address (or range of addresses) to be scanned.
 
 2. **`scan(ip)`**:  
-   Funkcja, która wysyła zapytania ARP do podanego adresu IP i zbiera odpowiedzi, identyfikując urządzenia w sieci (adresy IP i MAC).
+   This function sends ARP requests to the given IP address and collects responses, identifying devices on the network (IP and MAC addresses).
 
 3. **`display_result(result)`**:  
-   Funkcja wyświetla wyniki skanowania w formie tabeli zawierającej adresy IP i odpowiadające im adresy MAC.
+   This function displays the scan results in a table format showing the IP and corresponding MAC addresses.
 
-## Jak używać
+## How to Use
 
-1. **Zainstaluj zależności**  
-   Aby uruchomić skrypt, musisz mieć zainstalowaną bibliotekę `scapy`. Możesz ją zainstalować za pomocą `pip`:
+1. **Install dependencies**  
+   To run the script, you need to have the `scapy` library installed. You can install it via `pip`:
    ```bash
    pip install scapy

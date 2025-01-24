@@ -2,7 +2,7 @@ import scapy.all as scapy
 import argparse
 
 def get_args():
-    """Funkcja pozwala nam na przekazywanie argumentów wraz ze skryptem"""
+    """This function allows us to pass arguments along with the script"""
     parser =  argparse.ArgumentParser()
     parser.add_argument('-t', '--target', dest='target', help='Target IP Address/Addresses')
     option = parser.parse_args()
@@ -14,7 +14,7 @@ def get_args():
 
 
 def scan(ip):
-    """Funkcja pobierajca argumenty i sknujca hosta/hosty"""
+    """Function that receives arguments and scans the host/hosts"""
     arp_req_frame = scapy.ARP(pdst = ip)
     broadcast_ether_frame = scapy.Ether(dst = "ff:ff:ff:ff:ff:ff") 
     braodcast_ether_arp_req_frame = broadcast_ether_frame / arp_req_frame
